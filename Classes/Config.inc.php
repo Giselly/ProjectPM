@@ -1,11 +1,15 @@
 <?php
 
 /** Configurações do site */
+
+/** @var string */
+$host = is_string($_SERVER["HTTP_HOST"]) ? $_SERVER["HTTP_HOST"] : "" ;
+
 define('HOST', 'localhost');
 define('USER', 'root');
 define('PASS', 'vertrigo');
 define('DBSA', 'teste');
-define('RAIZ', 'http://localhost/ProjectPM');
+define('RAIZ', "http://{$host}/ProjectPM");
 
 /**
  * __autoload
